@@ -22,7 +22,7 @@ Create a webpage with anchor links and form fields and use jQuery selectors to a
     <div id="list1">
     <ul>
         <li class="apples">apples</li>
-        <li>strawberries</li>
+        <li class="strawberries">strawberries</li>
     </ul>
     </div>
     <p>Organization Name: <input type="text" name="user"></p>
@@ -34,6 +34,7 @@ Create a webpage with anchor links and form fields and use jQuery selectors to a
             });
             $("#list1").css("background-color", "yellow");
             $(".apples").css("color", "red");
+            $(".strawberries").css("color", "green");
             $("a").css("color", "red");
         });
     </script>
