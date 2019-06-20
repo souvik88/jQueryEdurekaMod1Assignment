@@ -11,63 +11,33 @@ Create a webpage with anchor links and form fields and use jQuery selectors to a
 <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 </head>
 
 <body>
     <h1>jQuery Module 1 Assignment</h1>
     <h1>HTML5 form</h1>
     <a href="https://www.google.com"><h2>Google</h2></a>
-    <button>Clicking here changes google to green</button>
     <hr>
-    <div class="list1">
+    <div id="list1">
     <ul>
-        <li>apples</li>
+        <li class="apples">apples</li>
         <li>strawberries</li>
     </ul>
     </div>
-    <form method="GET">
-        <label for="firstname">First name:</label>
-        <input id="firstname" name="firstname" type="text" placeholder="your first name" required>
-        <label for="lastname">Last name:</label>
-        <input id="lastname" name="lastname" type="text" placeholder="your last name" required>
-        <div>
-            <label for="male">Male</label>
-            <input name="gender" id="male" type="radio" value="male">
-            <label for="female">Female</label>
-            <input name="gender" id="female" type="radio" value="female">
-            <label for="other">Other</label>
-            <input name="gender" id="other" type="radio" value="other">
-        </div>
-
-        <div>
-            <label>
-                Email:</label>
-            <input id="email" name="email" type="email" placeholder="your email" required>
-            </label>
-            <label>
-                Password:
-                <input id="password" name="password" type="password" pattern=".{8, 12}" required title="password between 8 and 12 characters">
-            </label>
-        </div>
-        <label>
-            Birthday:
-            <input id="birthday" name="birthday" type="date" value="birthday">
-        </label>
-        
-        <div>
-            <label for="agreed"> I agree to the terms and conditions</label>
-            <input id="agreed" name="agreed" type="checkbox">
-        </div>
-        
-        <input type="submit">
-    </form>
+    <p>Organization Name: <input type="text" name="user"></p>
+    <button>Click to see name</button>
     <script>
-        $(function()
-        {
-            $(".list1")
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("input:text").val("Edureka");
+            });
+            $("#list1").css("background-color", "yellow");
+            $(".apples").css("color", "red");
+            $("a").css("color", "red");
         });
     </script>
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    
 </body>
 
 </html>
